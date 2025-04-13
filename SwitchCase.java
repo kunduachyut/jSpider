@@ -1,35 +1,15 @@
-//Date 05-04-2025
-public class SwitchCase{
-	public static void main(String args[]){
-		/*char choice = 'a';
-		switch(choice){
-		//This is the process of grouping of cases
-		//case 'a','e','i','o','u':
-		case 'a':
-		case 'e':
-		case 'i':
-		case 'o':
-		case 'u':
-			System.out.println("This is a vowel");
-			break;
-		default:
-			System.out.println("This is not a vowel");
+public class methodCallStatement {
 
-		}*/
-
-		//Store the value of switch case into a variable
-		//only decision making statement is "SWITCH"
-		int choice = 2;
- 		String res = 
-		switch(choice){
-		case 1: {
-			yield "Doramon";
-		}
-		default:{
-			yield "Shinchan";
-		}
-		};
-
-		System.out.println(res);
-	}
+    void method1(){
+        System.out.println("This is method 1");
+    }
+    void method2(){
+        System.out.println("This is method 2");
+        method1();
+    }
+    public static void main(String[] args) {
+        methodCallStatement obj = new methodCallStatement();
+        System.out.println("Calling method 1 through method 2");
+        obj.method2();
+    }
 }
